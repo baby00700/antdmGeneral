@@ -1,4 +1,4 @@
-import 'antd-mobile/dist/antd-mobile.css';
+// import 'antd-mobile/dist/antd-mobile.css';
 export const dva = {
   config: {
     onError(err) {

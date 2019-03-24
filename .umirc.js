@@ -28,7 +28,16 @@ export default {
       },
       routes,
       esLint: true,
+      autoprefixer : {
+        browsers : [
+          "iOS >= 8" ,
+          "Android >= 4"
+        ]
+      } ,
     }],
+  ],
+  extraBabelPlugins: [
+    ['import', { libraryName: "antd-mobile", style: true }],
   ],
   proxy: {
     "/api/v1/weather": {
