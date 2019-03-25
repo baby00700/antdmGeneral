@@ -4,47 +4,13 @@ import { Flex } from 'antd-mobile'
 import picture1 from '../../assets/p1.png'
 import grinfo from '../../assets/grinfo.png'
 import bjinfo from '../../assets/bjinfo.png'
+import jtinfo from '../../assets/jt.png'
+import jlinfo from '../../assets/jl.png'
+import cfinfo from '../../assets/cf.png'
+import jianglinfo from '../../assets/jiangli.png'
+import settings from '../../assets/setting.png'
 
 class Me extends React.Component{
-
-  cardWrap = (innerProps) => {
-    const {width, height, children} = innerProps
-    return (
-      <div
-        className={Styles.cardWrap}
-        style={{width,height}}
-      >
-        {children}
-      </div>
-    )
-  }
-
-  baseContent = (children) => {
-    return (
-      <div className={Styles.baseContent}>
-        {children.map((t,index) => {
-          return (
-            <div key={`${index}-k`}>
-              {t}
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
-
-  nameIcon = () => {
-    return (
-      <div  className={Styles.nameIcon}>
-        <div className={Styles.nameIcon.left}>
-          <img src="" alt=""/>
-        </div>
-        <div className={Styles.nameIcon.right}>
-          张三
-        </div>
-      </div>
-    )
-  }
 
   wrap = () => {
     return (
@@ -60,7 +26,7 @@ class Me extends React.Component{
             </div>
           </div>
         </div>
-        <div className={Styles.floatCards}>
+        <div className={Styles.floatCardsA}>
           <div className={Styles.funs}>
             <Flex style={{height:'100%'}}>
               <Flex.Item>
@@ -88,15 +54,72 @@ class Me extends React.Component{
             </Flex>
           </div>
         </div>
+
+        <div className={Styles.floatCardsB}>
+          <div className={Styles.funs}>
+            <Flex style={{height:'100%'}}>
+              <Flex.Item>
+                <div className={Styles.funCon}>
+                  <div className={Styles.iconTop}>
+                    <img src={jtinfo} alt=""/>
+                  </div>
+                  <div className={Styles.nameBottom}>
+                    家庭信息
+                  </div>
+                </div>
+              </Flex.Item>
+              <Flex.Item>
+                <div className={Styles.funCon}>
+                  <div
+                    className={Styles.iconTop}
+                  >
+                    <img src={jlinfo} alt=""/>
+                  </div>
+                  <div className={Styles.nameBottom}>
+                    在校经历
+                  </div>
+                </div>
+              </Flex.Item>
+            </Flex>
+          </div>
+        </div>
+
+        <div className={Styles.floatCardsC}>
+          <div className={Styles.funs}>
+            <Flex style={{height:'100%'}}>
+              <Flex.Item>
+                <div className={Styles.funCon}>
+                  <div className={Styles.iconTop}>
+                    <img src={jianglinfo} alt=""/>
+                  </div>
+                  <div className={Styles.nameBottom}>
+                    我的奖励
+                  </div>
+                </div>
+              </Flex.Item>
+              <Flex.Item>
+                <div className={Styles.funCon}>
+                  <div
+                    className={Styles.iconTop}
+                  >
+                    <img src={cfinfo} alt=""/>
+                  </div>
+                  <div className={Styles.nameBottom}>
+                    我的处分
+                  </div>
+                </div>
+              </Flex.Item>
+            </Flex>
+          </div>
+        </div>
+        <div className={Styles.settings}>
+          <img src={settings} alt=""/>设置
+        </div>
+
       </div>
     )
   }
 
-  baseIndoCard = () => {
-    return (
-      <div>baseinfo</div>
-    )
-  }
 
   render () {
     return this.wrap()
